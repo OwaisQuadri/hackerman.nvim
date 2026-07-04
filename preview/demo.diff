@@ -1,0 +1,11 @@
+--- a/mainframe.ts
++++ b/mainframe.ts
+@@ -1,6 +1,6 @@
+ class Mainframe {
+-  private readonly port: number = 8080
++  private readonly port: number = 0x1f90
+   async breach(target: string): Promise<Payload> {
+-    throw new Error('not implemented')
++    return { id: 42, name: target, active: true }
+   }
+ }

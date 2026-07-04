@@ -5,7 +5,21 @@ green-tinted greys, teal diagnostics, and purple for the magic bits. `Normal`
 has no background, so your terminal's translucency (e.g. Ghostty's
 `background-opacity`) shows through.
 
-<!-- TODO: screenshot -->
+## Preview
+
+<!-- Drop a screenshot at preview/screenshot.png, then uncomment:
+![hackerman](preview/screenshot.png)
+-->
+
+To see every color in action, open the demo files with the theme active:
+
+```sh
+nvim preview/demo.ts    # types, decorators, classes -- the full palette
+nvim preview/demo.lua   # the lua flavor
+nvim preview/demo.diff  # diff/git colors
+```
+
+Or audit every highlight group at once with `:so $VIMRUNTIME/syntax/hitest.vim`.
 
 ## Palette
 
