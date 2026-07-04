@@ -7,9 +7,7 @@ has no background, so your terminal's translucency (e.g. Ghostty's
 
 ## Preview
 
-<!-- Drop a screenshot at preview/screenshot.png, then uncomment:
-![hackerman](preview/screenshot.png)
--->
+<img src="preview/screenshot.png" width="50%" /><img src="preview/screenshot-lua.png" width="50%" />
 
 To see every color in action, open the demo files with the theme active:
 
