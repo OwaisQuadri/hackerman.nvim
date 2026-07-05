@@ -1,0 +1,23 @@
+#:schema https://conductor.build/schemas/settings.repo.schema.json
+
+# hackerman.nvim is a single self-contained colors/hackerman.lua file with no
+# dependencies and no setup() -- there's nothing to install here. `setup` just
+# checks nvim is on PATH so a broken workspace fails fast instead of silently.
+[scripts]
+setup = "command -v nvim >/dev/null || { echo 'nvim not found on PATH -- install from https://neovim.io' >&2; exit 1; }"
+archive = "true"
+run_mode = "concurrent"
+
+# Opens in Ghostty (not Conductor's embedded terminal pane) because this
+# theme's whole point -- Normal has no background -- only shows through a
+# real terminal's translucency/background-opacity. rtp^=. loads this
+# workspace's own colors/hackerman.lua rather than any globally installed copy.
+[scripts.run.demo]
+command = "open -na Ghostty --args --working-directory=\"$CONDUCTOR_WORKSPACE_PATH\" -e nvim -u NONE --cmd 'set rtp^=.' -c 'set termguicolors' -c 'colorscheme hackerman' -p preview/demo.lua preview/demo.ts preview/demo.diff"
+default = true
+icon = "terminal"
+
+# README's other suggested way to audit every highlight group at once.
+[scripts.run.hitest]
+command = "open -na Ghostty --args --working-directory=\"$CONDUCTOR_WORKSPACE_PATH\" -e nvim -u NONE --cmd 'set rtp^=.' -c 'set termguicolors' -c 'colorscheme hackerman' -c 'source $VIMRUNTIME/syntax/hitest.vim'"
+icon = "code"
