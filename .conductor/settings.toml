@@ -13,11 +13,11 @@ run_mode = "concurrent"
 # real terminal's translucency/background-opacity. rtp^=. loads this
 # workspace's own colors/hackerman.lua rather than any globally installed copy.
 [scripts.run.demo]
-command = "open -na Ghostty --args --working-directory=\"$CONDUCTOR_WORKSPACE_PATH\" -e nvim -u NONE --cmd 'set rtp^=.' -c 'set termguicolors' -c 'colorscheme hackerman' -p preview/demo.lua preview/demo.ts preview/demo.diff"
+command = "open -na Ghostty --args --working-directory=\"$CONDUCTOR_WORKSPACE_PATH\" -e nvim -u ~/.config/nvim/init.lua --cmd 'set rtp^=.' -c 'colorscheme hackerman' -p preview/demo.lua preview/demo.ts preview/demo.diff"
 default = true
 icon = "terminal"
 
 # README's other suggested way to audit every highlight group at once.
 [scripts.run.hitest]
-command = "open -na Ghostty --args --working-directory=\"$CONDUCTOR_WORKSPACE_PATH\" -e nvim -u NONE --cmd 'set rtp^=.' -c 'set termguicolors' -c 'colorscheme hackerman' -c 'source $VIMRUNTIME/syntax/hitest.vim'"
+command = "open -na Ghostty --args --working-directory=\"$CONDUCTOR_WORKSPACE_PATH\" -e nvim -u ~/.config/nvim/init.lua --cmd 'set rtp^=.' -c 'colorscheme hackerman' -c 'source $VIMRUNTIME/syntax/hitest.vim'"
 icon = "code"
