@@ -35,7 +35,7 @@ local p = {
 
   -- backgrounds (near-black, used sparingly so the glass stays visible)
   black = '#071009', -- fg for text sitting on a neon background
-  bg_float = '#0c1710', -- popups, statusline
+  bg_float = '#18291f', -- popups, statusline, hover docs (lighter so it reads as an overlay)
   bg_line = '#13241a', -- cursorline, reference highlights
   bg_visual = '#1c4a2e', -- visual selection
 
